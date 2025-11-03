@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HabitHero</title>
+
+  <!-- former filler -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>HabitHero</h1>
+        <p class="tagline">Small wins. Big change.</p>
+        <div id="userStats" class="user-stats">
+          <span id="levelDisplay">Level 1 (XP: 0)</span>
+          <span id="streakDisplay">Streak: 0 </span>
+        </div>
+      </div>
+      <div class="levelbox">
+        <button id="notify-btn" class="icon-btn"> Reminders</button>
+      </div>
+    </header>
+
+    <main class="main-grid">
+      <section class="left-panel">
+        <div class="progress-row">
+          <div class="progress-info">Today's progress</div>
+          <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+        </div>
+
+        <div class="add-row">
+          <input id="habit-input" type="text" placeholder="Add a new habit (e.g., Read 20 min)" />
+          <select id="categorySelect" aria-label="Category">
+            <option value="General">General</option>
+            <option value="Health">Health</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Learning">Learning</option>
+            <option value="Work">Work</option>
+          </select>
+          <button id="add-btn" class="primary">Add</button>
+        </div>
+
+        <ul id="habit-list" class="habit-list"></ul>
+
+        <div class="quote-area">
+          <div id="quote" class="quote">“Stay consistent — excellence is built daily.”</div>
+        </div>
+      </section>
+
+      <aside class="right-panel">
+        <div class="stats-card">
+          <h3>Weekly Activity</h3>
+          <div class="chart-wrap">
+            <canvas id="progressChart" aria-label="Weekly progress chart"></canvas>
+          </div>
+        </div>
+
+        <div class="stats-card">
+          <h3>Personal Stats</h3>
+          <div id="statsSummary" class="stats-summary">
+            <!-- filled by all JS code -->
+          </div>
+        </div>
+
+        <div class="stats-card">
+          <h3>Badges</h3>
+          <div id="badges" class="badges">
+            <!-- badges  here -->
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <small>Built for the Congressional App Challenge — HabitHero</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
